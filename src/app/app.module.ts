@@ -28,6 +28,18 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 import { ViewCategoryComponent } from './pages/admin/view-category/view-category.component';
 import { ViewQuizComponent } from './pages/admin/view-quiz/view-quiz.component';
+import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { SidebarComponent as UserSideBar}  from './pages/user/sidebar/sidebar.component';
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
+import { MatProgressSpinnerModule }  from '@angular/material/progress-spinner';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 
 @NgModule({
     declarations: [
@@ -44,7 +56,15 @@ import { ViewQuizComponent } from './pages/admin/view-quiz/view-quiz.component';
         WelcomeComponent,
         AddCategoryComponent,
         ViewCategoryComponent,
-        ViewQuizComponent
+        ViewQuizComponent,
+        AddQuizComponent,
+        UpdateQuizComponent,
+        ViewQuestionsComponent,
+        AddQuestionComponent,
+        UserSideBar,
+        LoadQuizComponent,
+        InstructionsComponent,
+        StartComponent
     ],
     imports: [
         BrowserModule,
@@ -60,6 +80,13 @@ import { ViewQuizComponent } from './pages/admin/view-quiz/view-quiz.component';
         MatToolbarModule,
         MatIconModule,
         MatListModule,
+        MatSlideToggleModule,
+        MatSelectModule,
+        MatProgressSpinnerModule,
+        NgxUiLoaderModule,
+        NgxUiLoaderHttpModule.forRoot({
+            showForeground: true,
+        }),
     ],
     providers: [authInterceptorProviders],
     bootstrap: [AppComponent]

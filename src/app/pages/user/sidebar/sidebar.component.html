@@ -1,0 +1,13 @@
+<mat-card style="max-height: 100%; display: flex; flex-direction: column;">
+    <div mat-subheader>Categories</div>
+    <mat-action-list style="flex: 1; overflow-y: auto; ">
+        <button mat-list-item routerLink="/user-dashboard/0">
+            <mat-icon mat-list-icon>quiz</mat-icon>
+            All Quizzes
+        </button>
+        <button [routerLink]="'/user-dashboard/'+c.id" mat-list-item *ngFor="let c of categories">
+            <mat-icon mat-list-icon>quiz</mat-icon>
+            {{c.title}}
+        </button>
+    </mat-action-list>
+</mat-card>

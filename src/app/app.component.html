@@ -1,4 +1,8 @@
-<app-navbar #navbar></app-navbar>
-<div class="content-container" #contentContainer>
-    <router-outlet></router-outlet>
+<ngx-ui-loader fgsColor="#ff4081" pbColor="#ff4081" text="Please wait.." pbThickness="6" textColor="#ff4081"></ngx-ui-loader>
+
+<div ngxUiLoaderBlurred blur="10">
+    <app-navbar #navbar></app-navbar>
+    <div class="content-container" #contentContainer>
+        <router-outlet></router-outlet>
+    </div>
 </div>

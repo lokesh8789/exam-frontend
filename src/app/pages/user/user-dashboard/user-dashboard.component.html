@@ -1,1 +1,12 @@
-<h1>Welcome To User DashBoard</h1>
+<div class="bootstrap-wrapper" style="height: 100%;">
+    <div class="container-fluid" style="height: 100%;">
+        <div class="row" style="height: 100%;">
+            <div class="col-md-2" style="overflow: auto; height: 100%;">
+                <app-sidebar-user></app-sidebar-user>
+            </div>
+            <div class="col-md-10" style="overflow: auto; height: 100%;">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
